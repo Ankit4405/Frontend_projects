@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS_files/Image_sliding_auto.css">
+    <title>Image sliding automatic</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="img11">
+                <img id="pic_section"
+                    src="https://images.unsplash.com/photo-1648737119359-510d4f551382?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+                    alt="Your browser doesn't support image">
+                <p>Animation with Images</p>
+                <div class="btn_section">
+                    <button id="btn_click">Change Image</button>
+                </div>
+                <p>OR</p>
+                <div class="timer">
+                    <h1 id="heading">Image change in&nbsp;<span id="watch">00:00 </span></h1>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <script>
+        // --------------
+        document.getElementById('pic_section').addEventListener('click',function(){
+            document.getElementById('pic_section').src = random_image(0,3);
+            setInterval(countdown_timer,1000);
+            seconds = 6;
+        })
+        // ----------------
+        // -------------------------
+        let seconds = 5;
+        let watch = document.getElementById('watch');
+        watch.innerHTML = `00:${seconds<10 ? '0':''}${seconds}`;
+        const countdown_timer = setInterval(function(){
+            seconds--;
+            watch.innerHTML= `00:${seconds<10 ? '0':''}${seconds}`;
+            if(seconds<=0 || seconds<1){
+                // clearInterval(countdown_timer)
+                document.getElementById('pic_section').src = random_image(0,3);
+                setInterval(countdown_timer,1000)
+                seconds = 6;
+            }
+        },1000)
+        // ----------------------------
+
+        let btn_click = document.querySelector('#btn_section');
+        let pic_section = document.querySelector('#pic_section');
+        let images = [
+
+            "https://images.unsplash.com/photo-1654586839444-5f72254cfd89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+            
+        
+            , "https://images.unsplash.com/photo-1654541451875-db49bf1a0974?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+        
+        
+            , "https://images.unsplash.com/photo-1654541696500-dd53556473c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+        
+            , "https://images.unsplash.com/photo-1654534095076-c780e81a9953?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+        ];
+        function random_image(min, max) {
+            let a = Math.floor(Math.random() * (max - min + 1) + min);
+            return images[a];
+        }
+        let b = random_image(0,3);
+        // console.log(b);
+        document.getElementById('btn_click').addEventListener('click', function(){
+            document.getElementById('pic_section').src = random_image(0, 3);
+            setInterval(countdown_timer,1000)
+            seconds = 6;
+        })
+        let disable_input = document.getElementById('disable_input');
+        let time_sec = 10;
+        disable_input.innerHTML = ``
+        var countdown = setInterval(()=>{
+
+        },1000)
+
+    </script>
+</body>
+
+</html>
