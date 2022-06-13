@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project2/Guess_number_game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Guessing Number Game</title>
+</head>
+<body>
+    <!-- <div class="belive_image"> -->
+    <main>
+        <div class="belive_image">
+            <h1 class="top_main_heading">TRY YOUR LUCK WITH NUMBERS</h1>
+            <h1 class="luck">ARE YOU BELIEVE IN YOUR LUCK?</h1>
+
+        </div>
+        <div class="container">
+            <div class="main_container">
+                <h1 class="top_heading">Number Guessing Game</h1>
+                <br>
+                <br>
+                <div class="player_name">
+                    <label for="player">What is your name:)</label>
+                    <input id="input_value" type="text">
+                </div>
+                <div class="btn_play">
+                    <button id="btn_ready" >Ready</button>
+                </div>
+            </div>
+        </div>
+        <div class="btn_plays">
+            <button id="ready_for_play">Start</button>
+        </div>
+    </main>
+</div>
+    <script>
+        let input_value = document.querySelector('#input_value');
+        let btn = document.querySelector('#btn_ready');
+        let main_heading = document.querySelector('.top_main_heading');
+        let main_container = document.querySelector('.container')
+        let luck = document.querySelector('.luck')
+        let main = document.querySelector('main');
+        let container = document.querySelector('.container')
+        let btn_plays = document.querySelector('.btn_plays')
+        btn.addEventListener('click',function(){
+            main_heading.innerHTML = `Welcome! ${input_value.value}`
+            main_container.style.display = 'none';
+            luck.style.display = 'block';
+            btn_plays.style.display = 'block'
+
+
+        })
+    </script>
+</body>
+</html>

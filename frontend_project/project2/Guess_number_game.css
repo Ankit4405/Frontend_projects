@@ -1,0 +1,169 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    /* border: 1.5px solid black; */
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main{
+    /* border: 2px solid green; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    background: rgb(125, 95, 255, .9);
+}
+.belive_image{
+    background-image: url(https://images.unsplash.com/photo-1633720823250-25c50fb09943?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGx1Y2t8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+}
+.top_main_heading{
+    /* border: 1px solid white; */
+    font-size: 3.8rem;
+    margin-top: 8rem;
+    letter-spacing: 2px;
+    color: rgb(47, 53, 66, 0.9);
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 1px 1px 1.8px white;
+    text-transform: capitalize;
+    display: inline-flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-shadow: 0px 0px 1px 1.5px white;
+    backdrop-filter: blur(5px);
+    border-radius: 7px 10px;
+
+}
+.luck{
+    /* border: 1px solid white; */
+    font-size: 3.6rem;
+    letter-spacing: 2px;
+    color: rgb(44, 62, 80, .9);
+    font-family: 'Indie Flower', cursive;
+    text-shadow: 1px 1px 3px white;
+    text-transform: capitalize;
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    display: none;
+    margin-inline: auto;
+    display: none;
+}
+.container{
+    /* border: 2px solid black; */
+    background-image: url(https://media2.giphy.com/media/3o6Mbb2RepU5Pn54fC/giphy.gif?cid=790b7611622cece760daf2559cb36cae7976bd829ea730ab&rid=giphy.gif&ct=g);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 700px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* height: auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main_container{
+    /* border: 2px solid blue; */
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    /* margin: 1rem; */
+    width: 100%;
+    margin-top: -10rem;
+}
+.top_heading{
+    /* border: 1px solid white; */
+    font-size: 50px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-shadow: 1px 1px 1.8px white;
+    color: rgb(0, 0, 0, .9);
+}
+.player_name{
+    /* border: 1px solid white; */
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-inline: auto;
+}
+label{
+    font-size: 28px;
+    padding-right: 1rem;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255, 0.5);
+}
+input[type=text]{
+    font-size: 22px;
+    padding: 2px 2px 2px 6px ;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 2px #2f3542;
+    text-transform: capitalize;
+}
+.btn_play{
+    /* border: 1px solid white; */
+    margin-top: 3rem;
+}
+#btn_ready{
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    letter-spacing: .2px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#btn_ready:hover{
+    background-color: #a4b0be;
+    color: whitesmoke;
+}
+.btn_plays{
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 2px 2px #34495e;
+    border-radius: 7px 25px;
+    border: none;
+    display: none;
+}
+#ready_for_play{
+    padding: 1rem 1.5rem;
+    font-size: 2.3rem;
+    border: none;
+    border-radius: 7px 25px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#ready_for_play:hover{
+    background-color: rgb(155, 89, 182, 0.2);
+    color: white;
+}
+
