@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Number_picker.css">
+    <title>Game Home Page</title>
+</head>
+
+<body>
+    <main class="main_gaming_area">
+        <div class="main_containers">
+            <div class="sandy">
+
+                <nav>
+                    <h2 class="top_heading1">
+                        Number guessing game
+                    </h2>
+                </nav>
+                <div class="game_information">
+                    <h3>
+                        Try and guess a random number between 1 and 20 
+                    </h3>
+                    <h3>You have 5 attempts to guess for right number</h3>
+                </div>
+                <div class="main_playing_area">
+                    <div class="main_playing_area1">
+    
+                        <h1 id="guees_number">Guess a number</h1>
+                        <input title="Guess number 1 to 20" id="putting_number_space" type="number" required> <br>
+                        <button id="submit_guess">Submit guess</button>
+                        <h3 class="attempt_left">You have 5 attempts</h3>
+                    </div>
+                    <div class="hint_section">
+                        <h1 id="player_hint">
+                            Too low! Try again!
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+         let putting_number = document.querySelector('#putting_number_space');
+         let submit_btn = document.querySelector('#submit_guess');
+         let player_hint = document.querySelector('#player_hint');
+         let attempt_left = document.querySelector('.attempt_left');
+        function randomNumber(min,max){
+            return Math.floor(Math.random()*(max - min +1) +min);
+        }
+        submit_btn.addEventListener('click',function(){
+            let chances = 5;
+            if(putting_number.value === randomNumber(1,20)){
+                player_hint.innerHTML = `Congratulations! You have chosen the correct number`;
+                chances = chances-1;
+                attempt_left.innerHTML = `Attempt left:${chances}`;
+            }else if(putting_number.value>20){
+                player_hint.style.fontSize = '1.5rem'
+                player_hint.innerHTML = `Sorry! please choose number between 1 and 20`
+            }
+            else{
+                player_hint.innerHTML = `Oh! You chose wrong number,Try again `
+                chances = chances-1;
+                attempt_left.innerHTML = `Attempt left: ${chances}`;
+            }
+        })
+    </script>
+</body>
+
+</html>
