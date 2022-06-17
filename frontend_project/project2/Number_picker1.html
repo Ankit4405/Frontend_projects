@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,3 +102,107 @@
 
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project2/Guess_number_game.css">
+    <title>Game Home Page</title>
+</head>
+
+<body>
+    <main class="main_gaming_area">
+        <div class="main_containers">
+            <div class="sandy">
+
+                <nav>
+                    <h2 class="top_heading1">
+                        Number guessing game
+                    </h2>
+                </nav>
+                <div class="game_information">
+                    <h3>
+                        Try and guess a random number between 1 and 20
+                    </h3>
+                    <h3>You have 5 attempts to guess for right number</h3>
+                </div>
+                <div class="main_playing_area">
+                    <div class="main_playing_area1">
+
+                        <h1 id="guees_number">Guess a number</h1>
+                        <input title="Guess number 1 to 20" id="putting_number_space" type="number" required> <br>
+                        <button id="submit_guess">Submit guess</button>
+                        <h3 class="attempt_left">You have 4 attempts</h3>
+                    </div>
+                    <div class="hint_section">
+                        <h1 id="player_hint">
+                            Too low! Try again!
+                        </h1>
+                    </div>
+                    <div class="refresh_game">
+                        <button id="refresh_btn">Refresh Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        let putting_number = document.querySelector('#putting_number_space');
+        let submit_btn = document.querySelector('#submit_guess');
+        let player_hint = document.querySelector('#player_hint');
+        let attempt_left = document.querySelector('.attempt_left');
+        let refresh_btn = document.querySelector('#refresh_btn');
+        function randomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        submit_btn.addEventListener('click', tryluck);
+
+        var attemptss = 4;
+        function tryluck() {
+            if(putting_number.value.length===0){
+                player_hint.innerHTML = `Please guess any number`;
+            }else{
+
+                if (putting_number.value === randomNumber(1, 20)) {
+                    player_hint.innerHTML = `Congratulations! You have chosen the correct number`;
+                    --attemptss;
+                    attempt_left.innerHTML = `Attempt left:${attemptss}`;
+                    putting_number.value = '';
+                } else {
+                    if (attemptss === 0) {
+                        player_hint.innerHTML = `Sorry! You do not have more attempts :)`
+                        submit_btn.style.display = 'none';
+                        refresh_btn.style.display = 'block';
+                        putting_number.value = '';
+                    } else if (putting_number.value > 20 || putting_number.value < 0) {
+                        player_hint.innerHTML = `Oh! Please chose between 1 and 20`;
+                        --attemptss;
+                        attempt_left.innerHTML = `Attempt left:${attemptss}`;
+                        putting_number.value = '';
+                    }
+                    else {
+                        player_hint.innerHTML = `Oh! You chose wrong number,Try again `;
+                        --attemptss;
+                        attempt_left.innerHTML = `Attempt left:${attemptss}`;
+                        putting_number.value = '';
+                    }
+                }
+            }
+        }
+        refresh_btn.addEventListener('click',function(){
+            attemptss = 4;
+            tryluck();
+            submit_btn.style.display = '';
+            refresh_btn.style.display = 'none';
+            attempt_left.innerHTML = `Attempt left:${attemptss}`;
+
+        });
+    </script>
+</body>
+
+</html>
+>>>>>>> 3cf1077e40c2811bba396ef14bb846d5dbb5df08

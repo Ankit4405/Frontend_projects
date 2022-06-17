@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="btn_plays">
-            <button id="ready_for_play">Start</button>
+            <button id="ready_for_play"><a href="../project2/Number_picker1.html">Start</a></button>
         </div>
     </main>
 </div>
@@ -49,9 +49,12 @@
             main_container.style.display = 'none';
             luck.style.display = 'block';
             btn_plays.style.display = 'block'
-
-
         })
+        // ======================== second tier
+        let putting_number = document.querySelector('#putting_number_space');
+        function randomNumber(min,max){
+            return Math.floor(Math.random()*(max - min +1) +min);
+        }
     </script>
 </body>
 </html>
