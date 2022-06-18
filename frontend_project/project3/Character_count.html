@@ -56,9 +56,9 @@
             return image_gallery[a];
         }
         let background_theme = document.querySelector('#background_theme');
-        let main = document.getElementsByTagName('main');
+        let main = document.getElementsByTagName('main')[0];
         background_theme.addEventListener('click',function(){
-            main.style.backgroundImage = URL(random_image_picker(0,4))
+            main.style.backgroundImage = `url(${random_image_picker(0,4)})`;
         })
 
 
