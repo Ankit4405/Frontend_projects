@@ -47,18 +47,19 @@
     </main>
     <script>
         const image_gallery = ['https://img.playbuzz.com/image/upload/ar_1.5,c_pad,f_jpg,b_auto/q_auto:good,f_auto,fl_lossy,w_480,c_limit,dpr_1/cdn/2c2dd0ea-8dec-4d49-8a95-f7b18f0b7aed/df312655-1d96-457d-88f4-cfc93c580d1d_560_420.jpg',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwpR0X1hmpt4Kd2WviLXQGPrnUllW2UoLgtoWBoesgtFtSPFCF808bibJ8K2VhHRCki48&usqp=CAU',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxmLTuD78jeZaVR3I_xfIuvmE4tse_JuhGjQ&usqp=CAU',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxWrBodkwbTlxbMexeQCOneifPHaOUoTFwPA&usqp=CAU',
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtQMwmsMjdYfF0W0cyMPX673aKVK3m8sSDjg&usqp=CAU']
+            'https://images.unsplash.com/photo-1655457418551-8405d8adc3f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+            'https://images.unsplash.com/photo-1655494393495-79b474dd2968?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
+            'https://images.unsplash.com/photo-1655379460199-4625c811fcb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
+        'https://images.unsplash.com/photo-1655508342579-d139e8d74bbf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1655552173583-c5f030fe4346?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60']
         function random_image_picker(min, max) {
             let a = Math.floor(Math.random() * (max - min + 1) + min);
             return image_gallery[a];
         }
         let background_theme = document.querySelector('#background_theme');
-        let main = document.getElementsByTagName('main');
+        let main = document.getElementsByTagName('main')[0];
         background_theme.addEventListener('click',function(){
-            main.style.backgroundImage = URL(random_image_picker(0,4))
+            main.style.backgroundImage = `url(${random_image_picker(0,5)}`;
         })
 
 

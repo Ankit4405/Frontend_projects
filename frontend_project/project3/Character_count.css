@@ -48,7 +48,7 @@ ul{
     /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: center;
     text-align: center;
     align-items: center;
     margin-right: 3rem;
@@ -68,6 +68,7 @@ ul li a{
     color: black;
     text-shadow: 1px 1px 2px white;
     background-color: rgb(182, 204, 186, .8);
+    background-color: transparent;
 }
 .plain_line{
     /* border: 1px solid black; */
@@ -166,6 +167,7 @@ footer{
     /* border: 1px solid black; */
     height: 1rem;
     padding: .5rem .7rem;
+    color: white;
 }
 #not_register a{
     text-decoration: none;
