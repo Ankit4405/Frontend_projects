@@ -1,0 +1,176 @@
+:root{
+   --font-size: 16px; 
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 1px solid black;
+    height: 100vh;
+    font-family: 'Indie Flower', cursive;
+}
+main{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://hips.hearstapps.com/seventeen/assets/15/53/1451572875-1412742-10154012897355695-2198660221602113911-o.jpg);
+}
+.main_container{
+    /* border: 1px solid blue; */
+    height: 100%;
+    /* background-color: #B6C9D8; */
+}
+.container{
+    /* border: 10px solid green; */
+    position: relative;
+    width: 100%;
+    height: 95%;
+}
+header{
+    /* border: 2px solid blue; */
+    height: 70px;
+}
+nav{
+    /* border: 1px solid green; */
+}
+ul{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    text-align: center;
+    align-items: center;
+    margin-right: 3rem;
+    flex-wrap: wrap;
+}
+ul li{
+    /* border: 1px solid black; */
+    list-style: none;
+    padding: .5rem 0rem;
+}
+ul li a{
+    border: 1px solid white;
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    font-size: 1.1rem;
+    letter-spacing: .2px;
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    background-color: rgb(182, 204, 186, .8);
+}
+.plain_line{
+    /* border: 1px solid black; */
+    height: 15px;
+    background-color: #BBB593;
+}
+.main_content_area{
+    /* border: 1px solid black; */
+    width: 70%;
+    height: 50%;
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: top;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: relative;
+    box-shadow: 0px 0px 1px 2.5px #B6C9D8;
+}
+.main_detail_content_area{
+    /* border: 1px solid blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+h1{
+    /* border: 1px solid green; */
+    font-size: 3rem;
+    letter-spacing: 1px;
+    padding: .5rem .2rem;
+    min-height: 10rem;
+    height: 25%;
+    padding-top: 1rem;
+    color: #6c5ce7;
+    text-shadow: 1px 1px 2px white;
+}
+h3{
+    /* border: 1px solid blue; */
+    font-size: 1.9rem;
+    letter-spacing: .5px;
+    margin-top: 3rem;
+    height: 5rem;
+    padding-top: 1.2rem;
+    color: #dfe6e9;
+    text-shadow: 1px 1px 2px black;
+}
+#getting_trouble{
+    /* border: 1px solid black; */
+    font-size: 1.2rem;
+    letter-spacing: .3px;
+    height: 3rem;
+    padding: .7rem;
+    color: #dfe6e9;
+    text-shadow: 1px 1px 2px black;
+}
+.btn_submit{
+    /* border: 1px solid black; */
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+
+}
+#btn_start{
+    /* border: 1px solid #2c3e50; */
+    padding: .4rem 0rem;
+    border-radius: 5px;
+}
+#btn_start a{
+    text-decoration: none;
+    padding: .4rem 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: .4px;
+    color: black;
+}
+#btn_start:hover a{
+    background-color: rgb(110, 120, 114, .6);
+}
+footer{
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 2px solid green; */
+}
+#not_register{
+    font-size: 1rem;
+    /* border: 1px solid black; */
+    height: 1rem;
+    padding: .5rem .7rem;
+}
+#not_register a{
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: .8px solid blueviolet;
+    padding-bottom: .1rem;
+    
+}
