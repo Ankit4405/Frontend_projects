@@ -25,21 +25,30 @@
             <div class="container">
                 <div class="main_content_area">
                     <section class="main_detail_content_area">
-                        <h1>Hi There! Welcome in ABC Memo Characters Game</h1>
-                        <label for="#">What is your full name:</label>
-                        <input type="text" min="20" max="25">
-                        <label for="#">What is your email address:</label>
-                        <input type="text">
+                        <h1 id="hi_there">Hi There! Welcome in ABC Memo Characters Game</h1>
+                        <form action="">
+
+                            <fieldset>
+                              <legend>Details</legend>
+                              <br>
+                              <label for="#">Full-Name: </label><input id="full_name" type="text" placeholder="Adam Smith" required>
+                              <br>
+                              <label for="#">Email: </label><input id="email" type="text" placeholder="Smith@gmail.com" required>
+                            </fieldset>
+                        </form>
                     </section>
                     <div class="btn_submit">
-                        <button id="btn_start"><a href="#">Start</a></button>
+                        <button id="btn_submit">Submit</button>
+                        <button id="btn_starts"><a id="btn_start_a" href="../project3/Character_main_count_page.html">Let's Start</a></button>
                     </div>
-                    <footer>
-                        <p id="not_register">Not registerd? <a href="#">Create an account</a></p>
-                    </footer>
+
                 </div>
             </div>
         </div>
     </main>
+    <script src="../project3/Character_count.js"></script>
+       
+
+   
 </body>
 </html>
