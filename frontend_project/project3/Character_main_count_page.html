@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project3/Character_count.css">
+    <title>Main_game_page</title>
+</head>
+<body>
+    
+    <main>
+        <div class="main_container">
+            <header>
+                <div class="plain_line"></div>
+                <nav>
+                    <ul>
+                        <li><a href="../project3/Character_count.html">Home</a></li>
+                        <li id="background_theme"><a href="#">Background Theme</a></li>
+                        <li><a href="#">Characters</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </nav>
+                <div class="plain_line"></div>
+            </header>
+            <div class="container">
+                <div class="main_content_area">
+                    <section class="main_detail_content_area areas">
+                        <h1 id="slow_down">Type your content in the below box</h1>   
+                        <!-- <h4 id="slow_down">Hello everyone</h4> -->
+                    </section>
+                    <div class="input_text">
+                        <form id="form_text_area" action="#">
+                            <textarea name="description" id="content_area" cols="105" rows="21" placeholder="Type Text here...."></textarea>
+                        </form>
+                    </div>
+                    
+                    <div class="btn_check">
+                        <button id="btn_checks">Check</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../project3/Character_count.js"></script>
+    <script>
+        let btn_checks = document.getElementById('btn_checks');
+        let slow_down = document.getElementById('slow_down');
+        let content_area = document.getElementById('content_area');
+        btn_checks.addEventListener('click',function(){
+            let a = content_area.value;
+            let b = a.replace(/ /g,'').length;
+            let d = a.match(/\w+/g).length;
+            slow_down.style.color = 'green'
+            slow_down.innerHTML = `Content has ${b} characters and ${d} words`
+        })
+    </script>
+</body>
+</html>
